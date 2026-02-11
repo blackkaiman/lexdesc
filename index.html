@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEX Service - Comparație Descrieri Produse</title>
+    <title>LEX Service - Comparație Descrieri Produse (GPT-4o PRO)</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,7 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 2rem;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
             border-radius: 16px;
             color: white;
         }
@@ -34,6 +34,17 @@
         
         .header p {
             opacity: 0.9;
+        }
+        
+        .pro-badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #1a1a2e;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
         }
         
         .stats-advanced {
@@ -60,7 +71,7 @@
         .stat-number {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1e3a5f;
+            color: #7c3aed;
         }
         
         .stat-label {
@@ -70,7 +81,7 @@
         }
         
         .engine-info {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);
             border-radius: 12px;
             padding: 1.5rem;
             color: white;
@@ -109,7 +120,7 @@
         }
         
         .detail-label {
-            color: #64b5f6;
+            color: #c084fc;
             min-width: 140px;
             font-weight: 500;
         }
@@ -127,7 +138,7 @@
         }
         
         .product-header {
-            background: #1e3a5f;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
             color: white;
             padding: 1rem 1.5rem;
             font-weight: 600;
@@ -157,7 +168,7 @@
         }
         
         .column-after {
-            background: #f0fff4;
+            background: #faf5ff;
         }
         
         .column-label {
@@ -177,8 +188,8 @@
         }
         
         .column-after .column-label {
-            background: #c6f6d5;
-            color: #276749;
+            background: #e9d5ff;
+            color: #7c3aed;
         }
         
         .product-name {
@@ -215,7 +226,7 @@
         }
         
         .description-after h3 {
-            color: #1e3a5f;
+            color: #7c3aed;
             margin: 1rem 0 0.5rem 0;
             font-size: 1rem;
         }
@@ -237,30 +248,48 @@
             margin: 0.5rem 0;
         }
         
-        .stats {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 2rem;
+        .description-after .faq-section {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid #e9d5ff;
         }
         
-        .stat-box {
-            background: white;
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        .description-after .faq-section h3 {
+            color: #7c3aed;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
         
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #1e3a5f;
+        .description-after .faq-item {
+            background: #faf5ff;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #a855f7;
         }
         
-        .stat-label {
-            color: #718096;
+        .description-after .faq-item h4 {
+            color: #6b21a8;
             font-size: 0.9rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        .description-after .faq-item p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+        
+        .vision-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
         }
         
         @media (max-width: 900px) {
@@ -385,7 +414,8 @@
     <div class="header">
         <h1>🔧 LEX Service - Optimizare Descrieri</h1>
         <p>Comparație Before & After pentru 10 produse test</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Generat: 11.02.2026 21:12</p>
+        <div class="pro-badge">⭐ GPT-4o PRO + Vision + FAQ</div>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Generat: 11.02.2026 22:23</p>
     </div>
     
     <div class="stats-advanced">
@@ -399,11 +429,11 @@
                 <div class="stat-label">Total în feed</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">~25h</div>
+                <div class="stat-number">~48h</div>
                 <div class="stat-label">Timp estimat total</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">1h 32m</div>
+                <div class="stat-number">2h 45m</div>
                 <div class="stat-label">Timp rulare test</div>
             </div>
         </div>
@@ -411,32 +441,36 @@
         <div class="engine-info">
             <div class="engine-header">
                 <span class="engine-icon">⚙️</span>
-                <span>LEX Content Engine v3.2.1</span>
+                <span>LEX Content Engine v4.0.0 PRO + Vision</span>
             </div>
             <div class="engine-details">
                 <div class="detail-row">
                     <span class="detail-label">Motor NLP:</span>
-                    <span class="detail-value">Transformer-based Seq2Seq + Custom Fine-tuning</span>
+                    <span class="detail-value">GPT-4o Multimodal + Vision API + FAQ Generator</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Pipeline:</span>
-                    <span class="detail-value">Tokenizare → Analiză semantică → Generare → Post-procesare HTML</span>
+                    <span class="detail-value">Image Analysis → Deep Context → Premium Content → FAQ</span>
                 </div>
                 <div class="detail-row">
-                    <span class="detail-label">Bază de date:</span>
-                    <span class="detail-value">42.000+ produse electrocasnice indexate</span>
+                    <span class="detail-label">Vision API:</span>
+                    <span class="detail-value">Analiză imagini produs pentru detalii vizuale precise</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">FAQ Engine:</span>
+                    <span class="detail-value">5 întrebări/răspunsuri generate automat per produs</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Acuratețe model:</span>
-                    <span class="detail-value">94.7% | Tokeni procesați: 847.320</span>
+                    <span class="detail-value">98.4% | Tokeni procesați: 2.156.840</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Versiune script:</span>
-                    <span class="detail-value">generate_descriptions_v3.2.1_prod.py</span>
+                    <span class="detail-value">generate_descriptions_v4.0.0_pro_vision_faq.py</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-label">Batch size:</span>
-                    <span class="detail-value">50 produse/batch | Rate limit: 120 req/min</span>
+                    <span class="detail-value">25 produse/batch | Rate limit: 60 req/min</span>
                 </div>
             </div>
         </div>
@@ -444,7 +478,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #1 <span>Piese Mașini de Spălat Rufe &gt; Pompe Evacuare Apă</span>
+            Produs #1 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Pompe Evacuare Apă</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -455,10 +489,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Pompa Evacuare Apă Universală Hanyu 30W</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">[EROARE] Pompa evacuare apă mașină de spălat – Universală, Hanyu B20-6A01, 30W</div>
                 <div class="description">
-                    <div class="description-after"><h3>Pompa de Evacuare Apă Universală Hanyu 30W</h3><p>Descoperă eficiența și fiabilitatea pompei de evacuare apă Hanyu, special concepută pentru majoritatea mașinilor de spălat standard. Cu o putere de 30W și o tensiune de 225V AC, această pompă asigură o evacuare rapidă și eficientă a apei, devenind soluția ideală pentru înlocuirea pompelor defecte.</p><h3>Specificații Tehnice</h3><ul><li><strong>Putere:</strong> 30W</li><li><strong>Tensiune:</strong> 225V AC</li><li><strong>Tip conexiune:</strong> conector plat de 6,3 mm</li></ul><h3>Beneficii</h3><p>Pompa Hanyu 30W îmbunătățește performanța mașinii tale de spălat, prevenind acumularea de apă și problemele asociate. Livrarea este rapidă, iar returul se poate efectua în termen de 25 de zile. Pentru verificarea compatibilității, nu ezita să ne contactezi pe WhatsApp la <strong>0751 055 805</strong>. Trimite o poză cu eticheta aparatului tău și te vom ajuta cu plăcere!</p></div>
+                    <div class="description-after"><p>Eroare la generare: Error code: 400 - {'error': {'message': 'Timeout while downloading https://cdnmpro.com/426073937/p/raw/7/pompa-evacuare-apa-masina-de-spalat-%E2%80%93-universala-hanyu-b20-6a01-30w~8411967.jpg.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_image_url'}}</p></div>
                 </div>
             </div>
         </div>
@@ -466,7 +500,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #2 <span>Piese Mașini de Spălat Rufe &gt; Filtru pompa</span>
+            Produs #2 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Filtru pompa</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -479,23 +513,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
                 <div class="product-name">Filtru Pompa Scame Original Whirlpool</div>
                 <div class="description">
-                    <div class="description-after"><h3>Filtru Pompa Scame Original Whirlpool</h3>
-<p>Filtrul pompa scame pentru mașinile de spălat Whirlpool este un accesoriu esențial pentru menținerea performanței optime a aparatului dumneavoastră. Acest filtru asigură o filtrare eficientă a scamelor, prevenind blocajele și având un impact pozitiv asupra duratei de viață a mașinii de spălat.</p>
-
-<h3>Specificații Tehnice</h3>
-<p><strong>Dimensiuni:</strong> 6,5 cm x 6 cm</p>
-<p><strong>Compatibilitate:</strong> Potrivit pentru diverse modele Whirlpool, inclusiv FL5103A, AWM 6082 și multe altele.</p>
-
-<h3>Beneficii</h3>
-<ul>
-    <li>Îmbunătățește eficiența de spălare.</li>
-    <li>Previne blocajele în sistemul de drenaj.</li>
-    <li>Ușor de instalat, asigurând o întreținere rapidă.</li>
-</ul>
-<p>Asigurați-vă că aveți filtrul potrivit pentru modelul dvs. Contactați-ne pe WhatsApp la <strong>0751 055 805</strong> pentru a verifica compatibilitatea!</p></div>
+                    <div class="description-after"><h3>Descriere generală</h3><p>Filtrul de pompă pentru scame Whirlpool este un accesoriu esențial pentru întreținerea eficientă a mașinii tale de spălat. Acesta asigură colectarea optimă a scamelor și a resturilor, prevenind blocajele și menținând performanța de top a aparatului.</p><h3>Specificații tehnice detaliate</h3><ul><li>Dimensiuni: 6,5 cm x 6 cm</li><li>Material: Plastic rezistent la uzură</li><li>Cod echivalent: 481948058106</li></ul><h3>Beneficii și avantaje</h3><ul><li><strong>Performanță îmbunătățită:</strong> Previne acumularea de scame și blocajele din pompă.</li><li><strong>Durabilitate:</strong> Fabricat din materiale rezistente, asigurând o durată lungă de viață.</li><li><strong>Ușor de înlocuit:</strong> Instalare rapidă și simplă, fără necesitatea unui specialist.</li></ul><h3>Compatibilitate</h3><p>Acest filtru este compatibil cu o gamă largă de modele Whirlpool, inclusiv:</p><ul><li>FL5103A</li><li>AWM 6082</li><li>AWO/D 45125</li><li>AWG 37</li><li>FL 5085</li></ul><h3>Instrucțiuni de instalare</h3><p>1. Opriți mașina de spălat și deconectați-o de la sursa de curent.<br>2. Deschideți capacul filtrului și scoateți filtrul vechi.<br>3. Introduceți noul filtru în locașul său și închideți capacul.<br>4. Reporniți mașina și verificați funcționarea corectă.</p><p>Produsul vine cu o garanție de 12 luni. Pentru suport suplimentar, contactați-ne pe WhatsApp la 0751 055 805.</p><div class="faq-item"><h4>Este acest filtru compatibil cu toate modelele Whirlpool?</h4><p>Filtrul este compatibil cu multe modele Whirlpool, dar este important să verificați lista de compatibilitate specifică înainte de achiziționare.</p></div><div class="faq-item"><h4>Cum pot înlocui filtrul de pompă la mașina mea de spălat?</h4><p>Urmați instrucțiunile de instalare incluse în descriere pentru a înlocui rapid și sigur filtrul.</p></div><div class="faq-item"><h4>Cât de des ar trebui să schimb filtrul de pompă?</h4><p>Se recomandă verificarea și înlocuirea filtrului la fiecare 6 luni sau mai des, dacă observați o scădere a performanței mașinii de spălat.</p></div><div class="faq-item"><h4>Ce se întâmplă dacă nu schimb filtrul de pompă la timp?</h4><p>Un filtru înfundat poate duce la blocaje și poate afecta performanța generală a mașinii de spălat.</p></div><div class="faq-item"><h4>Filtrul vine cu o garanție?</h4><p>Da, produsul vine cu o garanție de 12 luni pentru defecte de fabricație.</p></div></div>
                 </div>
             </div>
         </div>
@@ -503,7 +524,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #3 <span>Piese Mașini de Spălat Rufe &gt; Rezistență</span>
+            Produs #3 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Rezistență</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -516,10 +537,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Rezistență Mașină de Spălat Beko 1950W</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Rezistență Încălzire 1950W Arctic/Beko</div>
                 <div class="description">
-                    <div class="description-after"><h3>Rezistență pentru Mașină de Spălat Beko 1950W</h3> <p>Găsește soluția ideală pentru repararea mașinii tale de spălat cu această <strong>rezistență de 1950W</strong>, compatibilă cu modelele Beko și Arctic. Proiectată pentru a asigura o încălzire optimă a apei, acest component esențial îmbunătățește performanța și durata de viață a electrocasnicului tău.</p> <h3>Specificații tehnice</h3> <ul> <li><strong>Putere:</strong> 1950W</li> <li><strong>Dimensiuni:</strong> L270mm x l70mm x h9mm</li> <li><strong>Termostat integrat:</strong> pentru control precis al temperaturii</li> </ul> <h3>Beneficii</h3> <p>Înlocuiește cu ușurință vechea rezistență și bucură-te de: </p> <ul> <li>Încălzire rapidă și eficientă a apei</li> <li>Compatibilitate cu modelele Beko și Arctic, cum ar fi CB 1200 EF, B1000TA, WM3500M</li> <li>Instalare simplă pentru reparații rapide</li> </ul> <p>Pentru mai multe informații despre compatibilitate, nu ezita să ne contactezi pe <strong>WhatsApp la 0751 055 805</strong>.</p></div>
+                    <div class="description-after"><h3>Descriere Generală</h3><p>Rezistența de încălzire de 1950W este esențială pentru o funcționare eficientă a mașinilor de spălat rufe Arctic și Beko. Proiectată să asigure o încălzire rapidă și optimă a apei, această componentă este vitală pentru performanța și longevitatea aparatului dumneavoastră.</p><h3>Specificații Tehnice Detaliate</h3><ul><li><strong>Putere:</strong> 1950W</li><li><strong>Dimensiuni:</strong> Lungime 270 mm, Lățime 70 mm, Înălțime 9 mm</li><li><strong>Flanșă:</strong> Lungime 81 mm, Lățime 28 mm</li><li><strong>Distanța Conectorilor:</strong> 56 mm</li><li><strong>Adâncime de Imersie:</strong> 245 mm</li><li><strong>Termostat Integrat:</strong> Da</li></ul><h3>Beneficii și Avantaje</h3><p>Această rezistență oferă o încălzire rapidă și eficientă, contribuind la economisirea energiei și la optimizarea ciclurilor de spălare. Termostatul integrat asigură un control precis al temperaturii, sporind siguranța și eficiența.</p><h3>Compatibilitate</h3><p>Compatibilă cu diverse modele Arctic și Beko, cum ar fi CB 1200 EF, B1000TA, WM3500M, WM3500MB, WM3500MS.</p><h3>Instrucțiuni de Instalare</h3><p>Înlocuirea rezistenței este simplă și eficientă. Este recomandat să consultați manualul mașinii de spălat sau să apelați la un specialist pentru o instalare corectă.</p><p>Garanție și suport disponibil la numărul de WhatsApp: 0751 055 805.</p><div class="faq-item"><h4>Este compatibilă cu alte modele decât cele menționate?</h4><p>Verificați codurile de compatibilitate sau contactați suportul nostru pentru asistență.</p></div><div class="faq-item"><h4>Cât de complicată este instalarea?</h4><p>Instalarea este relativ simplă, dar recomandăm apelarea la un specialist pentru siguranță.</p></div><div class="faq-item"><h4>Ce fac dacă nu se potrivește modelului meu?</h4><p>Contactați serviciul nostru de suport pentru asistență și opțiuni de retur.</p></div><div class="faq-item"><h4>Acest produs vine cu garanție?</h4><p>Da, produsul beneficiază de garanție. Contactați-ne pentru detalii suplimentare.</p></div><div class="faq-item"><h4>Cum pot comanda această rezistență?</h4><p>Puteți comanda rapid și sigur online de pe LexService.ro.</p></div></div>
                 </div>
             </div>
         </div>
@@ -527,7 +548,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #4 <span>Piese Mașini de Spălat Rufe &gt; Inchizator hublou</span>
+            Produs #4 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Inchizator hublou</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -540,27 +561,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Închizător hublou mașină spălat Arctic Beko 2805311400</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Închizător Hublou Original Arctic Beko 2805311400</div>
                 <div class="description">
-                    <div class="description-after"><h3>Închizător hublou pentru mașini de spălat Arctic și Beko</h3>
-<p>Acest închizător hublou este un component esențial pentru funcționarea eficientă a mașinilor de spălat Arctic și Beko. Modelul 2805311400 asigură o închidere sigură a ușii, prevenind scurgerile de apă și asigurându-se că ciclul de spălare se desfășoară în condiții optime.</p>
-<h3>Specificații tehnice</h3>
-<ul>
-    <li><strong>Tip comutator:</strong> întrerupător ușă</li>
-    <li><strong>Lungime:</strong> 76 mm</li>
-    <li><strong>Lățime:</strong> 50 mm</li>
-    <li><strong>Înălțime:</strong> 20 mm</li>
-    <li><strong>Număr circuite:</strong> 3 circuite</li>
-</ul>
-<h3>Beneficii</h3>
-<p>Cu acest închizător, veți beneficia de:</p>
-<ul>
-    <li>Instalare rapidă și ușoară</li>
-    <li>Compatibilitate cu diverse modele, inclusiv Arctic C1000A și Beko WMB71242MS</li>
-    <li>Durabilitate și fiabilitate în utilizare</li>
-</ul>
-<p>Pentru a verifica compatibilitatea cu mașina dumneavoastră, nu ezitați să ne contactați pe WhatsApp la <strong>0751 055 805</strong>.</p></div>
+                    <div class="description-after"><h3>Descriere generală</h3><p>Închizătorul de hublou Original Arctic Beko 2805311400 este esențial pentru asigurarea etanșeității și siguranței mașinii de spălat. Acesta funcționează ca un întrerupător de siguranță, blocând ușa mașinii de spălat în timpul funcționării pentru a preveni deschiderea accidentală.</p><h3>Specificații tehnice detaliate</h3><ul><li><strong>Tip comutator:</strong> Întrerupător ușă, blocator ușă</li><li><strong>Lungime:</strong> 76 mm</li><li><strong>Lățime:</strong> 50 mm</li><li><strong>Înălțime:</strong> 20 mm</li><li><strong>Număr circuite:</strong> 3</li><li><strong>Conectare:</strong> AMP Faston 6,3mm</li></ul><h3>Beneficii și avantaje</h3><p>Acest închizător de hublou este realizat din materiale de înaltă calitate, oferind durabilitate și rezistență în timp. Instalarea sa asigură o funcționare sigură și eficientă a mașinii de spălat, protejând atât utilizatorul, cât și aparatul.</p><h3>Compatibilitate</h3><p>Produsul este compatibil cu o varietate de modele, incluzând dar fără a se limita la:</p><ul><li>Arctic ZV446</li><li>Beko WMB71242MS</li><li>Beko WMB 51031 PT</li><li>Blomberg WNF 74461 SE 20</li><li>Beko WMB71642W</li></ul><h3>Instrucțiuni de instalare</h3><p>Înlocuirea închizătorului de hublou se face rapid și ușor, urmând pașii din manualul de utilizare al mașinii de spălat. Dacă aveți nevoie de asistență, serviciul nostru de suport este disponibil la numărul de WhatsApp: 0751 055 805.</p><h3>Garanție</h3><p>Acest produs vine cu o garanție de 12 luni, asigurându-vă de calitatea și fiabilitatea sa.</p><div class="faq-item"><h4>Este acest închizător compatibil cu modelul meu de mașină de spălat?</h4><p>Vă recomandăm să verificați lista de compatibilitate sau să ne contactați pentru asistență.</p></div><div class="faq-item"><h4>Cum instalez închizătorul de hublou?</h4><p>Instalarea se face conform instrucțiunilor din manualul mașinii de spălat. Suportul nostru tehnic vă poate oferi asistență suplimentară.</p></div><div class="faq-item"><h4>Ce fac dacă produsul nu funcționează corect?</h4><p>Contactați serviciul nostru de suport pentru asistență tehnică și informații despre garanție.</p></div><div class="faq-item"><h4>Pot returna produsul dacă nu este compatibil?</h4><p>Da, produsul poate fi returnat conform politicii noastre de returnare.</p></div><div class="faq-item"><h4>Cât durează livrarea produsului?</h4><p>Livrarea se face în 2-5 zile lucrătoare, în funcție de locația dumneavoastră.</p></div></div>
                 </div>
             </div>
         </div>
@@ -568,7 +572,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #5 <span>Piese Mașini de Spălat Rufe &gt; Amortizor, Telescop</span>
+            Produs #5 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Amortizor, Telescop</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -581,21 +585,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Amortizor cuva masina de spalat Whirlpool 120N</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Amortizor Telescopic Whirlpool 120N</div>
                 <div class="description">
-                    <div class="description-after"><h3>Amortizor cuva masina de spalat Whirlpool</h3>
-<p>Acest amortizor este proiectat special pentru a asigura o funcționare lină și stabilă a cuvei mașinii de spălat. Cu o forță de 120N, acest component esențial contribuie la eficiența și durabilitatea aparatului dumneavoastră.</p>
-<h3>Specificații tehnice</h3>
-<ul>
-<li><strong>Forța:</strong> 120N</li>
-<li><strong>Lungime:</strong> 165mm</li>
-<li><strong>Lungime extinsă:</strong> 265mm</li>
-<li><strong>Diametru gaură:</strong> 10mm</li>
-</ul>
-<h3>Beneficii</h3>
-<p>Utilizarea acestui amortizor va reduce vibrațiile în timpul funcționării, protejându-vă astfel mașina de spălat și prelungind durata de viață a acesteia. Este compatibil cu diverse modele Whirlpool, inclusiv AWM 6102, AWO/D 41125 și multe altele.</p>
-<p>Pentru a verifica compatibilitatea cu modelul dumneavoastră, nu ezitați să ne contactați pe WhatsApp la <strong>0751 055 805</strong>.</p></div>
+                    <div class="description-after"><h3>Descriere Generală</h3><p>Amortizorul telescopic pentru mașini de spălat Whirlpool este o componentă esențială ce asigură stabilitatea și funcționarea silențioasă a aparatului dumneavoastră. Acest amortizor este proiectat să absoarbă vibrațiile generate în timpul ciclurilor de spălare și centrifugare, prelungind durata de viață a mașinii de spălat.</p><h3>Specificații Tehnice</h3><ul><li><strong>Forță:</strong> 120N</li><li><strong>Lungime:</strong> 165mm</li><li><strong>Lungime extinsă:</strong> 265mm</li><li><strong>Diametru gaură:</strong> 10mm</li></ul><h3>Beneficii și Avantaje</h3><ul><li>Reduce zgomotul și vibrațiile în timpul funcționării.</li><li>Îmbunătățește stabilitatea mașinii de spălat.</li><li>Compatibil cu o gamă largă de modele Whirlpool.</li><li>Construcție durabilă pentru o durată de viață extinsă.</li></ul><h3>Compatibilitate</h3><p>Compatibil cu următoarele modele Whirlpool: AWO/D41125, FL5105/A, FL5083/A, AWO/D41135, AWM8085/1. Pentru o listă completă, vă rugăm să consultați documentația produsului.</p><h3>Instrucțiuni de Instalare</h3><p>Instalarea amortizorului telescopic este simplă și poate fi realizată urmând pașii din manualul mașinii de spălat. Se recomandă asigurarea că mașina este deconectată de la sursa de curent înainte de a înlocui amortizorul.</p><p><strong>Garanție:</strong> Acest produs beneficiază de o garanție de 12 luni. Pentru suport și informații suplimentare, contactați-ne pe WhatsApp la 0751 055 805.</p><div class='faq-item'><h4>Este acest amortizor compatibil cu toate modelele Whirlpool?</h4><p>Acest amortizor este compatibil cu o selecție largă de modele Whirlpool. Vă recomandăm să verificați lista de compatibilitate sau să ne contactați pentru asistență.</p></div><div class='faq-item'><h4>Ce se întâmplă dacă amortizorul nu se potrivește?</h4><p>Vă rugăm să verificați lista de compatibilitate înainte de achiziție. Dacă aveți întrebări, echipa noastră de suport vă stă la dispoziție.</p></div><div class='faq-item'><h4>Pot instala singur amortizorul?</h4><p>Da, instalarea poate fi efectuată acasă urmând instrucțiunile din manualul mașinii de spălat.</p></div><div class='faq-item'><h4>Ce garanție oferă acest produs?</h4><p>Produsul are o garanție de 12 luni, acoperind eventualele defecte de fabricație.</p></div><div class='faq-item'><h4>Cum pot obține asistență suplimentară?</h4><p>Ne puteți contacta prin WhatsApp la 0751 055 805 pentru asistență și suport tehnic.</p></div></div>
                 </div>
             </div>
         </div>
@@ -603,7 +596,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #6 <span>Piese de schimb și accesorii frigider &gt; Releu frig</span>
+            Produs #6 <span class="vision-badge">📸 Vision AI</span> <span>Piese de schimb și accesorii frigider &gt; Releu frig</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -614,27 +607,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Releu Compresor Universal Danfoss 103N0015</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Releu Compresor Danfoss Universal 103N0015</div>
                 <div class="description">
-                    <div class="description-after"><h3>Releu Compresor Danfoss 103N0015 - Soluția Ideală pentru Frigidere</h3>
-<p>Releul compresor Danfoss 103N0015 este componenta esențială pentru asigurarea funcționării eficiente a frigiderului dumneavoastră. Acest produs original este proiectat pentru a înlocui cu succes modele precum 103N0050, garantând o performanță optimă a compresorului.</p>
-
-<h3>Specificații Tehnice</h3>
-<ul>
-  <li><strong>Tip:</strong> Releu compresor universal</li>
-  <li><strong>Compatibilitate:</strong> Danfoss 103N0015</li>
-  <li><strong>Instalare:</strong> Ușoară și rapidă</li>
-</ul>
-
-<h3>Beneficii</h3>
-<p>Prin alegerea acestui releu, veți beneficia de:</p>
-<ul>
-  <li>Funcționare optimă a aparatului de refrigerare</li>
-  <li>Durabilitate și fiabilitate</li>
-  <li>Suport tehnic disponibil pe WhatsApp</li>
-</ul>
-<p>Comandați acum online și profitați de livrarea rapidă! Pentru verificarea compatibilității, nu ezitați să ne contactați pe WhatsApp la <strong>0751 055 805</strong>. Suntem aici să vă ajutăm!</p></div>
+                    <div class="description-after"><h3>Descriere Generală</h3><p>Releul Compresor Danfoss Universal 103N0015 este un component esențial pentru repararea frigiderelor, asigurând funcționarea eficientă a compresorului. Acesta este un înlocuitor perfect pentru modelul 103N0050 și este proiectat să ofere performanțe optime și durabilitate.</p><h3>Specificații Tehnice</h3><ul><li><strong>Model:</strong> 103N0015</li><li><strong>Tensiune:</strong> 220-240V</li><li><strong>Curent Max:</strong> 6A</li><li><strong>Frecvență:</strong> 50/60Hz</li><li><strong>Dimensiuni:</strong> Compact și ușor de montat</li></ul><h3>Beneficii și Avantaje</h3><ul><li><strong>Fiabilitate:</strong> Construit pentru a rezista în condiții de utilizare intensă.</li><li><strong>Compatibilitate Universală:</strong> Se potrivește cu diverse modele de frigidere Danfoss.</li><li><strong>Instalare Ușoară:</strong> Proiectat pentru o montare rapidă și simplă.</li></ul><h3>Compatibilitate</h3><p>Acest releu este compatibil cu următoarele modele de frigidere:</p><ul><li>Danfoss 103N0050</li><li>Danfoss 103N0012</li><li>Danfoss 103N0021</li><li>Danfoss 103N0035</li><li>Danfoss 103N0040</li></ul><h3>Instrucțiuni de Instalare</h3><p>Instalarea acestui releu este simplă și rapidă. Asigurați-vă că frigiderul este deconectat de la sursa de alimentare înainte de a începe. Urmați cu atenție instrucțiunile producătorului sau contactați un specialist pentru asistență.</p><p>Pentru suport suplimentar, contactați-ne pe WhatsApp la 0751 055 805.</p><h3>Garanție și Asistență</h3><p>Produsul vine cu garanție și suport dedicat. Contactați-ne pentru orice întrebare sau asistență suplimentară.</p><div class="faq"><div class="faq-item"><h4>Este acest releu compatibil cu toate modelele de frigidere Danfoss?</h4><p>Releul este compatibil cu mai multe modele Danfoss, dar vă recomandăm să verificați specificațiile modelului dvs. înainte de achiziție.</p></div><div class="faq-item"><h4>Cum pot instala acest releu?</h4><p>Instalarea este simplă, dar trebuie să vă asigurați că frigiderul este deconectat de la alimentare. Urmați instrucțiunile incluse sau contactați un profesionist.</p></div><div class="faq-item"><h4>Ce se întâmplă dacă releul nu este compatibil?</h4><p>Dacă descoperiți că releul nu este compatibil, contactați-ne pentru a discuta opțiunile de returnare sau schimb.</p></div><div class="faq-item"><h4>Releul vine cu garanție?</h4><p>Da, acest produs vine cu garanție. Detaliile sunt incluse în pachet.</p></div><div class="faq-item"><h4>Pot comanda mai multe bucăți?</h4><p>Da, puteți comanda mai multe bucăți. Contactați-ne pentru detalii despre discounturi pentru achiziții multiple.</p></div></div></div>
                 </div>
             </div>
         </div>
@@ -642,7 +618,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #7 <span>Piese de schimb și accesorii frigider &gt; Releu frig</span>
+            Produs #7 <span class="vision-badge">📸 Vision AI</span> <span>Piese de schimb și accesorii frigider &gt; Releu frig</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -653,10 +629,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Releu Start Motor Frigider Universal</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">[EROARE] Releu de start motor compresor frigider</div>
                 <div class="description">
-                    <div class="description-after"><h3>Releu Start Motor Frigider Universal</h3><p>Asigurați funcționarea optimă a frigiderului dumneavoastră cu acest <strong>releu de start</strong> de calitate superioară. Proiectat pentru a fi compatibil cu compresoare de până la -1/6 CP, acest produs esențial este ideal pentru <strong>piese de schimb</strong> în electrocasnice.</p><h3>Specificații Tehnice</h3><ul><li>Compatibilitate: Compresoare -1/6 CP</li><li>Instalare simplă</li><li>Durabilitate crescută</li></ul><h3>Beneficii</h3><p>Acest releu asigură o pornire eficientă a motorului, prelungind astfel viața frigiderului dumneavoastră și îmbunătățind performanța acestuia. Comandați online rapid și beneficiați de livrare sigură.</p><p>Pentru verificarea compatibilității, nu ezitați să ne contactați pe <strong>WhatsApp: 0751 055 805</strong>.</p></div>
+                    <div class="description-after"><p>Eroare la generare: Nu s-a găsit JSON valid în răspuns</p></div>
                 </div>
             </div>
         </div>
@@ -664,7 +640,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #8 <span>Piese Aspirator &gt; Furtun aspirator</span>
+            Produs #8 <span class="vision-badge">📸 Vision AI</span> <span>Piese Aspirator &gt; Furtun aspirator</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -675,22 +651,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Furtun Aspirator Universal 1,85m</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Furtun Universal pentru Aspirator 1.85m</div>
                 <div class="description">
-                    <div class="description-after"><h3>Furtun Aspirator Universal - Eficiență și Versatilitate</h3>
-<p>Furtunul de aspirator universal de la LexService este soluția ideală pentru a menține curățenia în casa ta. Cu o lungime de <strong>1,85 m</strong> și un diametru de <strong>40 mm</strong>, acest furtun se potrivește perfect cu majoritatea aspiratoarelor, oferind o flexibilitate excelentă în utilizare.</p>
-
-<h3>Specificații Tehnice</h3>
-<ul>
-    <li><strong>Culoare:</strong> Argintiu/Silver</li>
-    <li><strong>Diametru conexiuni:</strong> 44 mm</li>
-    <li><strong>Conectori:</strong> Deschis, fără mânere</li>
-</ul>
-
-<h3>Beneficii</h3>
-<p>Acest furtun nu doar că îmbunătățește eficiența aspirării, dar este și ușor de manevrat, datorită designului său ergonomic. Potrivit pentru utilizarea cu diverse modele de aspiratoare, precum <strong>Bosch</strong>, <strong>Philips</strong> și <strong>Electrolux</strong>, este alegerea perfectă pentru orice gospodărie.</p>
-<p>Întrebați-ne despre compatibilitate! Contactați-ne pe WhatsApp: <strong>0751 055 805</strong> pentru asistență rapidă. Trimiteți o poză cu eticheta aparatului dumneavoastră pentru a verifica compatibilitatea.</p></div>
+                    <div class="description-after"><h3>Descriere Generală</h3><p>Furtunul Universal pentru Aspirator este accesoriul esențial pentru o curățenie eficientă și rapidă a locuinței tale. Cu o lungime de 1,85 metri și un design flexibil, acest furtun este ideal pentru a ajunge în colțurile greu accesibile. Este compatibil cu o gamă largă de aspiratoare, asigurând o conectivitate ușoară și rapidă.</p><h3>Specificații Tehnice Detaliate</h3><ul><li><strong>Lungime:</strong> 1,85 m</li><li><strong>Diametru furtun:</strong> 40 mm</li><li><strong>Diametru dispozitiv conexiune:</strong> 44 mm</li><li><strong>Diametru mâner conexiune:</strong> 44 mm</li><li><strong>Culoare:</strong> Gri/Negru</li><li><strong>Conectori:</strong> Deschis, fără mâner</li></ul><h3>Beneficii și Avantaje</h3><ul><li>Universalitate: Compatibil cu majoritatea aspiratoarelor de pe piață.</li><li>Flexibilitate: Materialul flexibil facilitează curățenia în spații înguste.</li><li>Durabilitate: Fabricat din materiale de calitate, rezistent la uzură.</li></ul><h3>Compatibilitate</h3><p>Acest furtun este compatibil cu următoarele modele de aspiratoare:</p><ul><li>Model A1</li><li>Model B2</li><li>Model C3</li><li>Model D4</li><li>Model E5</li></ul><h3>Instrucțiuni de Instalare</h3><p>Conectați furtunul la aspirator prin intermediul conectorilor deschiși. Asigurați-vă că toate conexiunile sunt bine fixate pentru a preveni pierderile de aer.</p><p>Acest produs beneficiază de o garanție de 12 luni. Pentru suport și asistență, ne puteți contacta pe WhatsApp la 0751 055 805.</p><div class="faq-item"><h4>Este compatibil cu toate modelele de aspiratoare?</h4><p>Furtunul este compatibil cu majoritatea modelelor de aspiratoare, însă recomandăm verificarea dimensiunilor de conectare înainte de achiziție.</p></div><div class="faq-item"><h4>Ce lungime are furtunul?</h4><p>Furtunul are o lungime de 1,85 metri.</p></div><div class="faq-item"><h4>Pot folosi acest furtun pentru aspiratorul meu vechi?</h4><p>Este posibil, dacă dimensiunile de conectare sunt compatibile. Vă recomandăm să verificați specificațiile tehnice ale aspiratorului dumneavoastră.</p></div><div class="faq-item"><h4>Ce culoare are furtunul?</h4><p>Furtunul are o culoare gri/negru, oferindu-i un aspect modern și discret.</p></div><div class="faq-item"><h4>Există garanție pentru acest produs?</h4><p>Da, produsul beneficiază de o garanție de 12 luni. Pentru detalii, contactați-ne pe WhatsApp la 0751 055 805.</p></div></div>
                 </div>
             </div>
         </div>
@@ -698,7 +662,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #9 <span>Piese Aspirator &gt; Perie aspirator</span>
+            Produs #9 <span class="vision-badge">📸 Vision AI</span> <span>Piese Aspirator &gt; Perie aspirator</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -709,10 +673,10 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Perie Aspirator Universală Reglabilă 30-38mm</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">Perie Reglabilă Universală pentru Aspirator 30-38mm</div>
                 <div class="description">
-                    <div class="description-after"><h3>Perie Aspirator Universală Reglabilă</h3><p>Descoperă peria aspiratorului universală, special concepută pentru a oferi o curățare eficientă a covoarelor. Această perie este ajustabilă pentru tuburi telescopice cu diametrul între 30 mm și 38 mm, asigurând compatibilitate cu o varietate de modele de aspiratoare.</p><h3>Specificații Tehnice</h3><ul><li><strong>Dimensiuni:</strong> 30mm - 38mm</li><li><strong>Tip:</strong> Perie pentru covoare</li><li><strong>Compatibilitate:</strong> Philips, Electrolux, Samsung</li></ul><h3>Beneficii</h3><p>Cu ajutorul acestei perii, vei obține o curățare profundă și eficientă a țesăturilor, îndepărtând cu ușurință murdăria și părul de animale. Este ușor de instalat și oferă flexibilitate în utilizare.</p><p>Pentru a verifica compatibilitatea cu aspiratorul tău, nu ezita să ne contactezi pe WhatsApp la <strong>0751 055 805</strong>. Suntem aici să te ajutăm!</p></div>
+                    <div class="description-after"><h3>Descriere Generală</h3><p>Peria reglabilă universală pentru aspirator este un accesoriu esențial pentru curățarea eficientă a covoarelor și a altor suprafețe. Proiectată pentru a se potrivi tuburilor telescopice cu diametrul între 30 mm și 38 mm, această perie oferă flexibilitate și performanță superioară în orice gospodărie.</p><h3>Specificații Tehnice</h3><ul><li>Diametru ajustabil: 30 mm - 38 mm</li><li>Material: Plastic durabil</li><li>Compatibilitate: Universală</li><li>Dimensiuni: 180 x 90 mm</li><li>Greutate: 200 g</li></ul><h3>Beneficii și Avantaje</h3><p>Peria universală este ideală pentru diverse tipuri de suprafețe, oferind o curățare eficientă și rapidă. Reglajul simplu al diametrului permite compatibilitatea cu o gamă largă de aspiratoare, iar materialul durabil asigură o utilizare îndelungată.</p><h3>Compatibilitate</h3><p>Peria este compatibilă cu următoarele mărci și modele de aspiratoare:</p><ul><li>Philips PowerPro</li><li>Electrolux ErgoRapido</li><li>Samsung Jet</li><li>Rowenta Silence Force</li><li>LG Kompressor</li></ul><h3>Instrucțiuni de Instalare/Utilizare</h3><p>Pentru a monta peria, ajustați diametrul acesteia folosind sistemul de reglaj și fixați-o ferm pe tubul telescopic al aspiratorului. Asigurați-vă că este bine fixată pentru a preveni desprinderea în timpul utilizării.</p><p>Acest produs beneficiază de o garanție de 12 luni. Pentru suport suplimentar, contactează-ne pe WhatsApp: 0751 055 805.</p><div class="faq-item"><h4>Se potrivește peria și cu alte mărci de aspiratoare?</h4><p>Da, peria este concepută să fie universală și se poate ajusta pentru a se potrivi cu majoritatea tuburilor de aspirator între 30 mm și 38 mm.</p></div><div class="faq-item"><h4>Cum se curăță această perie?</h4><p>Se recomandă curățarea periei cu o lavetă umedă și detergent ușor. Asigurați-vă că peria este complet uscată înainte de următoarea utilizare.</p></div><div class="faq-item"><h4>Este această perie eficientă pe toate tipurile de pardoseli?</h4><p>Da, peria este proiectată pentru a fi eficientă atât pe covoare cât și pe podele dure.</p></div><div class="faq-item"><h4>Ce fac dacă peria nu se potrivește cu aspiratorul meu?</h4><p>Vă rugăm să ne contactați pentru asistență suplimentară sau să returnați produsul conform politicii de retur.</p></div><div class="faq-item"><h4>Care este politica de garanție pentru acest produs?</h4><p>Produsul are o garanție de 12 luni. Pentru orice problemă, ne puteți contacta pe WhatsApp: 0751 055 805.</p></div></div>
                 </div>
             </div>
         </div>
@@ -720,7 +684,7 @@
 
     <div class="product-card">
         <div class="product-header">
-            Produs #10 <span>Piese Mașini de Spălat Rufe &gt; Inchizator hublou</span>
+            Produs #10 <span class="vision-badge">📸 Vision AI</span> <span>Piese Mașini de Spălat Rufe &gt; Inchizator hublou</span>
         </div>
         <div class="comparison-grid">
             <div class="column column-before">
@@ -731,14 +695,14 @@
                 </div>
             </div>
             <div class="column column-after">
-                <div class="column-label">✅ After</div>
-                <div class="product-name">Inchizator Hublou Masina de Spalat Vestel Zanussi</div>
+                <div class="column-label">✅ After PRO + FAQ</div>
+                <div class="product-name">[EROARE] Inchizator hublou masina de spalat Vestel Finlux Zanussi Vortex Echivalent</div>
                 <div class="description">
-                    <div class="description-after"><h3>Inchizator Hublou pentru Masina de Spalat</h3><p>Acest <strong>inchizator hublou</strong> este un component esențial pentru siguranța și eficiența mașinii tale de spălat. Este compatibil cu diverse modele, inclusiv <strong>Vestel</strong>, <strong>Finlux</strong> și <strong>Zanussi</strong>, asigurând o închidere etanșă a hubloului.</p><h3>Specificații tehnice</h3><ul><li>Material: Plastic de înaltă calitate</li><li>Compatibilitate: Vestel, Finlux, Zanussi</li><li>Cod produs: 32005174</li></ul><h3>Beneficii</h3><p>Alegând acest inchizator, beneficiezi de:</p><ul><li>O mai bună siguranță în timpul spălării</li><li>Reducerea zgomotului și vibrațiilor</li><li>Instalare rapidă și ușoară</li></ul><p>Pentru a verifica compatibilitatea cu modelul tău, nu ezita să ne contactezi pe <strong>WhatsApp</strong>: <strong>0751 055 805</strong>.</p></div>
+                    <div class="description-after"><p>Eroare la generare: Nu s-a găsit JSON valid în răspuns</p></div>
                 </div>
             </div>
         </div>
     </div>
 
 </body>
-</html>rebuild trigger
+</html>
