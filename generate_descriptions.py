@@ -14,24 +14,36 @@ from datetime import datetime
 # API Key - setează variabila de mediu OPENAI_API_KEY
 openai.api_key = os.environ.get("OPENAI_API_KEY", "")
 
-SYSTEM_PROMPT = """Ești un copywriter expert pentru un magazin online de piese de schimb pentru electrocasnice (LexService.ro).
+SYSTEM_PROMPT = """Ești un copywriter expert pentru un magazin online de piese de schimb și accesorii pentru electrocasnice (LexService.ro).
 
 Trebuie să generezi:
 1. O DENUMIRE NOUĂ - scurtă, clară, profesională (max 80 caractere)
-2. O DESCRIERE NOUĂ în format HTML - bine structurată, fără liste lungi de coduri de modele
+2. O DESCRIERE NOUĂ în format HTML - bine structurată, cu secțiune de SOLUȚII
+3. Un bloc FAQ cu 5 întrebări și 5 răspunsuri relevante
 
 REGULI pentru descriere:
 - Folosește <h3>, <p>, <ul>, <li>, <strong> pentru structură
-- Include: ce este produsul, specificații tehnice principale, beneficii
-- NU include liste lungi de modele compatibile (maxim 3-5 exemple)
+- Secțiuni obligatorii:
+  * Descriere generală (ce este produsul, pentru ce se folosește)
+  * Specificații tehnice principale
+  * SOLUȚII - descrie CE PROBLEMĂ REZOLVĂ acest produs (ex: "Mașina de spălat nu mai centrifughează? Această piesă restabilește funcționarea normală..."). Scopul este să ajutăm clientul să înțeleagă DE CE are nevoie de acest produs și ce defecțiune/problemă remediază.
+  * Beneficii (economisire, durabilitate, performanță restaurată)
+  * Compatibilitate (maxim 3-5 modele exemplu)
 - Menționează că pot contacta pe WhatsApp: 0751 055 805 pentru verificare compatibilitate
 - Tonul: profesional, de încredere, orientat spre client
-- Lungime: 150-250 cuvinte
+- Lungime descriere: 200-350 cuvinte
+
+REGULI pentru FAQ:
+- 5 întrebări și 5 răspunsuri relevante pentru produs
+- Întrebări practice pe care clienții le-ar pune (compatibilitate, montaj, simptome defecțiune, garanție, livrare)
+- Răspunsuri clare, utile, care inspiră încredere
+- Format HTML: fiecare FAQ într-un <div class="faq-item"><h4>Întrebarea</h4><p>Răspunsul</p></div>
 
 Răspunde STRICT în format JSON:
 {
   "denumire_noua": "...",
-  "descriere_noua": "<HTML structurat>"
+  "descriere_noua": "<HTML structurat cu descriere + soluții>",
+  "faq_html": "<HTML cu 5 div-uri faq-item>"
 }"""
 
 def generate_new_content(nume, descriere, categorie):
@@ -59,7 +71,7 @@ Generează denumirea și descrierea nouă în format JSON."""
                 {"role": "user", "content": user_prompt}
             ],
             temperature=0.7,
-            max_tokens=800
+            max_tokens=1500
         )
         
         content = response.choices[0].message.content
@@ -73,7 +85,8 @@ Generează denumirea și descrierea nouă în format JSON."""
         print(f"Eroare: {e}")
         return {
             "denumire_noua": f"[EROARE] {nume}",
-            "descriere_noua": f"<p>Eroare la generare: {str(e)}</p>"
+            "descriere_noua": f"<p>Eroare la generare: {str(e)}</p>",
+            "faq_html": ""
         }
 
 def generate_html_report(products_data):
@@ -460,6 +473,77 @@ def generate_html_report(products_data):
                 font-size: 0.9rem;
             }
         }
+        
+        .faq-section {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .faq-section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1e3a5f;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid #e2e8f0;
+            transition: box-shadow 0.2s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .faq-item h4 {
+            color: #2d5a87;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .faq-item h4::before {
+            content: '\2753';
+            flex-shrink: 0;
+        }
+        
+        .faq-item p {
+            color: #4a5568;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            .faq-section {
+                padding: 1rem;
+            }
+            
+            .faq-item {
+                padding: 0.8rem;
+            }
+            
+            .faq-item h4 {
+                font-size: 0.85rem;
+            }
+            
+            .faq-item p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -530,6 +614,14 @@ def generate_html_report(products_data):
         if len(product['descriere_veche']) > 2000:
             descriere_veche_escaped += "\n\n[... truncat pentru preview ...]"
         
+        faq_section = ""
+        if product.get('faq_html'):
+            faq_section = f"""
+        <div class="faq-section">
+            <div class="faq-section-title">❓ Întrebări Frecvente (FAQ)</div>
+            {product['faq_html']}
+        </div>"""
+        
         html_content += f"""
     <div class="product-card">
         <div class="product-header">
@@ -551,6 +643,7 @@ def generate_html_report(products_data):
                 </div>
             </div>
         </div>
+        {faq_section}
     </div>
 """
     
@@ -591,7 +684,8 @@ def main():
             'descriere_veche': descriere,
             'categorie': categorie,
             'denumire_noua': result['denumire_noua'],
-            'descriere_noua': result['descriere_noua']
+            'descriere_noua': result['descriere_noua'],
+            'faq_html': result.get('faq_html', '')
         })
         
         print(f"   ✅ Denumire nouă: {result['denumire_noua'][:60]}...")
