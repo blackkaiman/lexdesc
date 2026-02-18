@@ -1,0 +1,205 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <section class="uzina-verify-v3"><!-- element decorativ -->\
+<div class="uzina-decor"><br /></div>\
+<div class="uzina-wrap">\
+<div class="uzina-title">Nu g\uc0\u259 se\u537 ti o pies\u259  pe site?</div>\
+<div class="uzina-info">Introdu mai jos <strong>seria</strong> sau <strong>brand-ul aparatului electrocasnic</strong><br />pentru identificare rapid\uc0\u259  \u537 i comand\u259  cu livrare &icirc;n <b>5&ndash;7 zile lucr\u259 toare</b>.</div>\
+<!-- bara de c\uc0\u259 utare -->\
+<div class="uzina-bar"><input type="text" id="verifyInput" placeholder="Ex: BOSCH, TE6513RW12, WT45H..." /> <button type="button" id="verifyBtn">\uc0\u55357 \u56589  Caut\u259  piesa</button></div>\
+<!-- badge livrare -->\
+<div class="uzina-badge">\uc0\u55357 \u56986  Livrare &icirc;n 5&ndash;7 zile lucr\u259 toare</div>\
+<!-- linie accent -->\
+<div class="uzina-accent"><br /></div>\
+</div>\
+</section>\
+<p>\
+<script>\
+document.addEventListener("DOMContentLoaded", () => \{\
+    const btn = document.getElementById("verifyBtn");\
+    const input = document.getElementById("verifyInput");\
+\
+    if (!btn || !input) return;\
+\
+    input.addEventListener("keydown", (e) => \{\
+        if (e.key === "Enter") \{\
+            e.preventDefault();\
+            btn.click();\
+        \}\
+    \});\
+\
+    btn.addEventListener("click", () => \{\
+        const query = input.value.trim();\
+        if (!query) return;\
+\
+        btn.disabled = true;\
+        btn.textContent = "\uc0\u9203  Se caut\u259 ...";\
+\
+        const baseUrl = "https://shop.euras.com/eshopmvc/search?g7=3103788N&suchbg=";\
+        const searchUrl = baseUrl + encodeURIComponent(query);\
+\
+        window.open(searchUrl, "_blank");\
+\
+        setTimeout(() => \{\
+            btn.disabled = false;\
+            btn.textContent = "\uc0\u55357 \u56589  Caut\u259  piesa";\
+        \}, 800);\
+    \});\
+\});\
+</script>\
+</p>\
+<style>\
+.uzina-verify-v3 \{\
+  font-family:'Poppins', sans-serif;\
+  background:linear-gradient(to right, #0a2a47, #145a9e);\
+  padding:40px 32px;\
+  border-radius:18px;\
+  color:#ffffff;\
+  box-shadow:0 6px 20px rgba(0,0,0,0.15);\
+  max-width:760px;\
+  margin:35px auto;\
+  position:relative;\
+  overflow:hidden;\
+\}\
+\
+/* cerc decorativ */\
+.uzina-decor \{\
+  position:absolute;\
+  top:-30px;\
+  right:-50px;\
+  width:200px;\
+  height:200px;\
+  background:rgba(255,255,255,0.08);\
+  border-radius:50%;\
+\}\
+\
+.uzina-wrap \{\
+  position:relative;\
+  z-index:2;\
+  text-align:center;\
+\}\
+\
+/* titlu */\
+.uzina-title \{\
+  font-size:1.5rem;\
+  font-weight:600;\
+  margin-bottom:14px;\
+\}\
+\
+/* descriere */\
+.uzina-info \{\
+  font-size:1rem;\
+  line-height:1.65;\
+  margin-bottom:26px;\
+  color:rgba(255,255,255,0.9);\
+\}\
+\
+.uzina-info strong \{\
+  color:#ffdd91;\
+  font-weight:600;\
+\}\
+\
+/* bara input */\
+.uzina-bar \{\
+  display:flex;\
+  align-items:center;\
+  justify-content:center;\
+  max-width:540px;\
+  margin:0 auto 26px;\
+  background:rgba(255,255,255,0.12);\
+  border-radius:50px;\
+  border:2px solid #ffdd91;\
+  overflow:hidden;\
+\}\
+\
+.uzina-bar input \{\
+  flex:1;\
+  border:none;\
+  outline:none;\
+  padding:14px 22px;\
+  font-size:1rem;\
+  color:#ffffff;\
+  background:transparent;\
+\}\
+\
+.uzina-bar input::placeholder \{\
+  color:rgba(255,255,255,0.6);\
+\}\
+\
+.uzina-bar button \{\
+  background:#ffdd91;\
+  color:#0a2a47;\
+  border:none;\
+  padding:14px 28px;\
+  font-weight:600;\
+  font-size:1rem;\
+  cursor:pointer;\
+  transition:all 0.3s ease;\
+  white-space:nowrap;\
+\}\
+\
+.uzina-bar button:hover \{\
+  background:#ffe8b5;\
+  box-shadow:0 0 18px rgba(255,221,145,0.6);\
+\}\
+\
+.uzina-bar button:disabled \{\
+  opacity:0.7;\
+  cursor:not-allowed;\
+\}\
+\
+/* badge livrare */\
+.uzina-badge \{\
+  background:#ffffff;\
+  color:#0a2a47;\
+  display:inline-block;\
+  padding:8px 18px;\
+  border-radius:30px;\
+  font-size:0.9rem;\
+  font-weight:600;\
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);\
+  margin-top:5px;\
+\}\
+\
+/* linie accent */\
+.uzina-accent \{\
+  margin:22px auto 0;\
+  width:110px;\
+  height:4px;\
+  background:#ffdd91;\
+  border-radius:2px;\
+\}\
+\
+/* Mobile */\
+@media (max-width:600px) \{\
+  .uzina-verify-v3 \{\
+    padding:32px 20px;\
+    border-radius:16px;\
+  \}\
+\
+  .uzina-bar \{\
+    flex-direction:column;\
+    gap:12px;\
+    background:transparent;\
+    border:none;\
+  \}\
+\
+  .uzina-bar input \{\
+    width:100%;\
+    border-radius:14px;\
+    background:rgba(255,255,255,0.12);\
+    border:2px solid #ffdd91;\
+    text-align:center;\
+  \}\
+\
+  .uzina-bar button \{\
+    width:100%;\
+    border-radius:14px;\
+  \}\
+\}\
+</style>}
